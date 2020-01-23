@@ -1,9 +1,6 @@
-## sbt project compiled with Dotty
+## Dotty Solar System
 
-### Usage
+### Goal
 
-This is a normal sbt project, you can compile code with `sbt compile` and run it
-with `sbt run`, `sbt console` will start a Dotty REPL.
-
-For more information on the sbt-dotty plugin, see the
-[dotty-example-project](https://github.com/lampepfl/dotty-example-project/blob/master/README.md).
+Demonstrating Dotty new features through a simple example: modeling a very basic version of our solar system.
+The main idea is to follow Dotty's release cycle when new features are introduced and make example evolve.

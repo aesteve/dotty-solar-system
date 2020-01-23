@@ -16,3 +16,7 @@ class TestPlanets
   @Test
   def jupiterIsTheHeaviestPlanet(): Unit = 
     assertEquals(Planet.Jupiter, Planet.values.maxBy(_.mass))
+
+  @Test
+  def earthIsTheMostDensePlanet(): Unit =
+    assertEquals(Planet.Earth, Planet.values.maxBy(density))

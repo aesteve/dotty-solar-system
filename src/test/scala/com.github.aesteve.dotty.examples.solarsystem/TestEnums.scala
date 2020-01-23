@@ -7,12 +7,12 @@ class TestPlanets
 
   @Test
   def weShouldBeSomewhere(): Unit = 
-    assertNotNull(DottyPlanet.Earth)
+    assertNotNull(Planet.Earth)
 
   @Test 
   def testPlanetNumber(): Unit =
-    assertEquals(8, DottyPlanet.values.size)
+    assertEquals(8, Planet.values.size)
   
   @Test
   def jupiterIsTheHeaviestPlanet(): Unit = 
-    assertEquals(DottyPlanet.Jupiter, DottyPlanet.values.maxBy(_.mass))
+    assertEquals(Planet.Jupiter, Planet.values.maxBy(_.mass))

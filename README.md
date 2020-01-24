@@ -5,10 +5,12 @@
 Demonstrating Dotty new features through a simple example: modeling a very basic version of our solar system.
 The main idea is to follow Dotty's release cycle when new features are introduced and make example evolve.
 
-### Walkthrough
+### Current Progress (=> Walkthrough)
 
-1. Enumerations
-2. Opaque types
+1. [Enumerations](https://dotty.epfl.ch/docs/reference/enums/enums.html)
+  1.1. Start with [implementation 1](tree/enumerations-1) 
+  1.2. Then [implementation 2](tree/enumerations-2)
+2. Opaque types: 
 3. No more package-objects
 4. Intersection types
 5. Union types

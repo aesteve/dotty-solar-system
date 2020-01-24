@@ -20,3 +20,13 @@ class TestPlanets
   @Test
   def earthIsTheMostDensePlanet(): Unit =
     assertEquals(Planet.Earth, Planet.values.maxBy(density))
+
+  @Test
+  def cometsAndPlanetsHaveDensity(): Unit = 
+    assertFalse(areYouHeavierOn(tchourioumovGuerassimenko))
+
+  def tchouriHasATail(): Unit = 
+    assertTrue(hasTail(tchourioumovGuerassimenko))
+
+  def earthDoesntHaveATail(): Unit = 
+    assertFalse(hasTail(Planet.Earth))

@@ -8,14 +8,22 @@ The main idea is to follow Dotty's release cycle when new features are introduce
 ### Current Progress (=> Walkthrough)
 
 1. [Enumerations](https://dotty.epfl.ch/docs/reference/enums/enums.html)
-  1.1. Start with [implementation 1](tree/enumerations-1) 
-  1.2. Then [implementation 2](tree/enumerations-2)
-2. Opaque types: 
-3. No more package-objects
-4. Intersection types
-5. Union types
+  * Start with [implementation 1](tree/enumerations-1) 
+  * Then [implementation 2](tree/enumerations-2)
+2. [Opaque types](http://dotty.epfl.ch/docs/reference/other-new-features/opaques.html): [implementation](tree/opaque-types)
+3. [No more package-objects](http://dotty.epfl.ch/docs/reference/dropped-features/package-objects.html): [implementation](tree/no-more-package-objects)
+4. [Intersection types](http://dotty.epfl.ch/docs/reference/new-types/intersection-types.html) [implementation](tree/intersection-types)
+5. [Union types]()
 
 ### Todo
+
+6. ADT
+7. Conversions
+8. Given Parameters
+9. Implicit function types
+10. Type Classes
+11. TypeClass derivation / Multiversal equality
+
 
 Find an example:
 * Conversions: this is the most easy one to show, since here we'll have true Conversions between units

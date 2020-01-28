@@ -25,6 +25,7 @@ enum SolarSystemObject[P <: Planet]
   case Comet(mass: PositiveDouble, nucleusRadius: PositiveDouble, 
 ```
 And say it's an ADT "enum on steroids basically"
+
 7. Given Parameters
 8. Implicit function types
 9. Type Classes

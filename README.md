@@ -13,17 +13,23 @@ The main idea is to follow Dotty's release cycle when new features are introduce
 2. [Opaque types](http://dotty.epfl.ch/docs/reference/other-new-features/opaques.html): [implementation](tree/opaque-types)
 3. [No more package-objects](http://dotty.epfl.ch/docs/reference/dropped-features/package-objects.html): [implementation](tree/no-more-package-objects)
 4. [Intersection types](http://dotty.epfl.ch/docs/reference/new-types/intersection-types.html) [implementation](tree/intersection-types)
-5. [Union types]()
+5. [Union types](http://dotty.epfl.ch/docs/reference/new-types/union-types.html) [implementation](tree/union-types)
 
 ### Todo
 
-6. ADT
-7. Conversions
-8. Given Parameters
-9. Implicit function types
-10. Type Classes
+6. ADT: As an example, we could introduce a "generalized, parametric enumeration" as follows:
+```scala
+enum SolarSystemObject[P <: Planet] 
+  case DwarfPlanet(mass: PositiveDouble)
+  case Satellite(mass: PosiveDouble, planet: P)
+  case Comet(mass: PositiveDouble, nucleusRadius: PositiveDouble, 
+```
+And say it's an ADT "enum on steroids basically"
+7. Given Parameters
+8. Implicit function types
+9. Type Classes
+10. Conversions
 11. TypeClass derivation / Multiversal equality
-
 
 Find an example:
 * Conversions: this is the most easy one to show, since here we'll have true Conversions between units

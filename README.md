@@ -10,10 +10,13 @@ The main idea is to follow Dotty's release cycle when new features are introduce
 1. [Enumerations](https://dotty.epfl.ch/docs/reference/enums/enums.html)
   * Start with [implementation 1](tree/enumerations-1) 
   * Then [implementation 2](tree/enumerations-2)
-2. [Opaque types](http://dotty.epfl.ch/docs/reference/other-new-features/opaques.html): [implementation](tree/opaque-types)
-3. [No more package-objects](http://dotty.epfl.ch/docs/reference/dropped-features/package-objects.html): [implementation](tree/no-more-package-objects)
-4. [Intersection types](http://dotty.epfl.ch/docs/reference/new-types/intersection-types.html) [implementation](tree/intersection-types)
-5. [Union types](http://dotty.epfl.ch/docs/reference/new-types/union-types.html) [implementation](tree/union-types)
+2. [Opaque types](https://dotty.epfl.ch/docs/reference/other-new-features/opaques.html): [implementation](tree/opaque-types)
+3. [No more package-objects](https://dotty.epfl.ch/docs/reference/dropped-features/package-objects.html): [implementation](tree/no-more-package-objects)
+4. [Intersection types](https://dotty.epfl.ch/docs/reference/new-types/intersection-types.html) [implementation](tree/intersection-types)
+5. [Union types](https://dotty.epfl.ch/docs/reference/new-types/union-types.html) [implementation](tree/union-types)
+6. [ADT]
+7. [Trait Parameters](https://dotty.epfl.ch/docs/reference/other-new-features/trait-parameters.html)(tree.trait-parameters-mission)
+
 
 ### Todo
 
@@ -24,10 +27,10 @@ enum SolarSystemObject[P <: Planet]
   case Satellite(mass: PosiveDouble, planet: P)
   case Comet(mass: PositiveDouble, nucleusRadius: PositiveDouble) 
 ```
-Or an `ExplorationResult[T]`
+Or even better: an `ExplorationResult[T]`
 ```scala
 enum ExplorationResult[T] 
-  case Picture(raw: Array[Byte]) extends ExplorationResult[Byte]
+  case Picture(raw: Array[Byte]) extends ExplorationResult[Array[Byte]]
   case Litterature(text: String) extends ExplorationResult[String]
   case ScientificResult(worked: Boolean) extends ExplorationResult[Boolean]
   case Nothing

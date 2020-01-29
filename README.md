@@ -37,8 +37,12 @@ enum ExplorationResult[T]
 And say it's an ADT "enum on steroids basically"
 
 ----
+
 Here we're missing something to introduce measurement units, let's dig in the dotty docs some new features to replace `PositiveDouble` with something better (that will be used in 7. Extensions for instance: 1.0.kg)
+Tried with trait parameters, but that goes a bit too far, better getting off "units of measurement", this could be a talk on its own. Let's stick to spatial exploration with doubles and no units. Handling units like in Libra or squants is a fantastic topic for an other talk.
+
 ----
+
 7. Trait with parameters: Here the goal would be to replace `PositiveDouble` with something carrying a bit more information. We can introduce a `Measure` and a `MeasurementUnit`, `MeasurementUnit` will have a parameter named "symbol" (like `"kg"`), or simply a `Mission` that must have a code, no matter what the mission is.
 7. Extensions
 8. Given Parameters

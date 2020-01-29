@@ -15,7 +15,7 @@ The main idea is to follow Dotty's release cycle when new features are introduce
 4. [Intersection types](https://dotty.epfl.ch/docs/reference/new-types/intersection-types.html) [implementation](tree/intersection-types)
 5. [Union types](https://dotty.epfl.ch/docs/reference/new-types/union-types.html) [implementation](tree/union-types)
 6. [ADT]
-7. [Trait Parameters](https://dotty.epfl.ch/docs/reference/other-new-features/trait-parameters.html)(tree.trait-parameters-mission)
+7. [Trait Parameters](https://dotty.epfl.ch/docs/reference/other-new-features/trait-parameters.html)(tree/trait-parameters-mission)
 
 
 ### Todo

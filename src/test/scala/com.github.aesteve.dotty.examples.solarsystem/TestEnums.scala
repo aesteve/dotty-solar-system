@@ -15,7 +15,3 @@ class TestPlanets:
     assertEquals(8, ScalaPlanet.values.size)
     assertEquals(8, DottyPlanet.values.size)
   
-  @Test
-  def jupiterIsTheHeaviestPlanet(): Unit = 
-    assertEquals(ScalaPlanet.Jupiter, ScalaPlanet.values.maxBy(_.mass))
-    assertEquals(DottyPlanet.Jupiter, DottyPlanet.values.maxBy(_.mass))

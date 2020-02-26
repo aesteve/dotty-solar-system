@@ -1,9 +1,9 @@
 package com.github.aesteve.dotty.examples.solarsystem
 
-trait Weights
+trait Weights:
   def mass: PositiveDouble
 
-trait HasVolume
+trait HasVolume:
   def volume: PositiveDouble
 
 // If any object has a weight and a volume, we're able to calculate its density

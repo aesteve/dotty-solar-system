@@ -42,7 +42,7 @@ trait Monad[F[_]] extends Functor[F] { // "A `Monad` for type `F[_]` is a `Funct
   def [A, B](x: F[A]).flatMap(f: A => F[B]): F[B] // the flattening ability is named `flatMap`, using extension methods as previous examples
   def [A, B](x: F[A]).map(f: A => B) = x.flatMap(f `andThen` pure) // the `map(f)` ability is simply a combination of applying `f` then turning the result into an `F[A]` then applying `flatMap` to it
 }
-given readerMonad[Ctx]: Monad[[X] =>> Ctx => X] {
+given readerMonad[Ctx] as Monad[[X] =>> Ctx => X] {
   def [A, B](r: Ctx => A).flatMap(f: A => Ctx => B): Ctx => B =
     ctx => f(r(ctx))(ctx)
   def pure[A](x: A): Ctx => A =
@@ -57,16 +57,22 @@ def compute(i: Int)(config: Config): String = ???
 def show(str: String)(config: Config): Unit = ???
 
 val computeWithoutConfig: ConfigDependent[String] = compute(42)
-
+given listMonad: Monad[List] {
+  def pure[A](x: A): List[A] =
+    List(x)
+  def [A, B](xs: List[A]).flatMap(f: A => List[B]): List[B] =
+    xs.flatMap(f) // let's rely on the existing `flatMap` method of `List`
+}
 def computeAndShow(i: Int): Config => Unit = compute(i).flatMap(show)
 
-given ConfigReaderMonad: Monad[[Result] =>> Config => Result]
+given ConfigReaderMonad as Monad[[Result] =>> Config => Result] {
   def [A, B](r: Config => A).flatMap(f: A => Config => B): Config => B =
     config => f(r(config))(config)
   def pure[A](x: A): Config => A =
     config => x
+}
 
-class TestTypeClass
+class TestTypeClass:
   @Test
   def testTypeClassStr(): Unit = 
     assert("ab" == List("a", "b").combineAll)

@@ -1,6 +1,6 @@
 package com.github.aesteve.dotty.examples.solarsystem
 
-enum DottyPlanet(val mass: Double, val radius: Double)
+enum DottyPlanet(val mass: Double, val radius: Double):
   case Mercury extends DottyPlanet(3.303e+23, 2.4397e6)
   case Venus   extends DottyPlanet(4.869e+24, 6.0518e6)
   case Earth   extends DottyPlanet(5.976e+24, 6.37814e6)

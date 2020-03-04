@@ -3,7 +3,7 @@ package com.github.aesteve.dotty.examples.solarsystem
 private def fromPos(double: Double): PositiveDouble = 
   PositiveDouble.safe(double).get
 
-enum Planet(val mass: PositiveDouble, val radius: PositiveDouble) extends Weights with HasVolume
+enum Planet(val mass: PositiveDouble, val radius: PositiveDouble) extends Weights with HasVolume:
   case Mercury extends Planet(fromPos(3.303e+23), fromPos(2.4397e6))
   case Venus   extends Planet(fromPos(4.869e+24), fromPos(6.0518e6))
   case Earth   extends Planet(fromPos(5.976e+24), fromPos(6.37814e6))

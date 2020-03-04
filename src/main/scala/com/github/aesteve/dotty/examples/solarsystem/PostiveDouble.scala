@@ -7,7 +7,7 @@ package com.github.aesteve.dotty.examples.solarsystem
  * in fact, any arithmetic operation will "lose" the PositiveDouble type
  */ 
 opaque type PositiveDouble <: Double = Double
-object PositiveDouble
+object PositiveDouble:
   def safe(double: Double): Option[PositiveDouble] =
     if (double > 0.0d) then Some(double)
     else None
